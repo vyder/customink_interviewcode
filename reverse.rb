@@ -2,11 +2,10 @@
 
 fileName = ARGV[0]
 
-counter = 1
-file = File.new(fileName)
+inFile = File.new(fileName)
 outFile = File.open("output.txt", "w")
 
-while(line = file.gets)
+while(line = inFile.gets)
 	
 	## Split the line on period(.), exclamation(!) and question(?) marks
 	i = 0 #line iterator
@@ -49,5 +48,5 @@ while(line = file.gets)
 end
 
 # Close the all opened files
-file.close
+inFile.close
 outFile.close
